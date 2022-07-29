@@ -16,6 +16,7 @@ public class GameScript : MonoBehaviour
     //========== Ball Controls 
     public GameObject ball;
     public Transform spawnPoint;
+    public GameObject BallCollector;
 
     //========== Spike Controls 
     public List<Transform> points;  //Holds all of the points that the spike goes through 
@@ -33,6 +34,7 @@ public class GameScript : MonoBehaviour
     private void Start()
     {
         //Present the Text to values of 0
+        score.text = "Points: " + scoreCounter;
     }
 
     // Update is called once per frame
@@ -68,6 +70,7 @@ public class GameScript : MonoBehaviour
     {
         livesCounter--;
         //Update the text 
+        lives.SetText("Lives: " + livesCounter);
         if (livesCounter == 0)
         {
             BackToMainMenu();
@@ -79,17 +82,25 @@ public class GameScript : MonoBehaviour
     {
         scoreCounter++;
         //Update the Text 
+        score.SetText("Points: " + scoreCounter);
     }
 
     //Creates a new ball
     public void SpawnBall()
     {
-        //Create Ball
+        //Give position for cookie to spawn at home
+        var pos = new Vector3(0, 5, 0);
+        //Creates the ball 
+        var spawn = Instantiate(ball, pos, Quaternion.identity);
+        //Connects to BallCollector
+        spawn.transform.SetParent(BallCollector.transform);
     }
 
     //Sends the game back to the main menu scene 
-    private void BackToMainMenu()
+    public void BackToMainMenu()
     {
         //Send back to the main menu
+        SceneManager.LoadScene(levelName);
     }
 }
+

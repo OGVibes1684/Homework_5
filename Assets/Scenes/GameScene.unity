@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 50131509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.1375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1287871197}
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 101.899994, y: -195}
-  m_SizeDelta: {x: 203.4, y: 390.8}
+  m_AnchoredPosition: {x: 66.585785, y: -208.63}
+  m_SizeDelta: {x: 132.7715, y: 366.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &50131511
 MonoBehaviour:
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Life: 3'
+  m_text: 'Lives: 3'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -331,6 +331,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293385260}
   m_CullTransparentMesh: 1
+--- !u!1 &319191233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 319191234}
+  m_Layer: 0
+  m_Name: BallCollector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &319191234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319191233}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 541.69336, y: 74.70063, z: 0.14831543}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &323795436
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,8 +860,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 780, y: -195}
-  m_SizeDelta: {x: 203.4, y: 390.8}
+  m_AnchoredPosition: {x: 814.3598, y: -207.2}
+  m_SizeDelta: {x: 134.6804, y: 415.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413447675
 MonoBehaviour:
@@ -1293,6 +1324,10 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1840518054}
+    - target: {fileID: 3864454491007765129, guid: 9dcbcfd4b9cb62e4c90ee069b79d9a23, type: 3}
+      propertyPath: BallCollector
+      value: 
+      objectReference: {fileID: 319191233}
     - target: {fileID: 3864454491210478148, guid: 9dcbcfd4b9cb62e4c90ee069b79d9a23, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.35

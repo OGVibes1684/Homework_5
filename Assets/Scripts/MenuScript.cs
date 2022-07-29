@@ -9,6 +9,7 @@ public class MenuScript : MonoBehaviour
 
     public void NextLevel()
     {
+        SceneManager.LoadScene(levelName);
         //Use SceneManager to move to next Level
         //Make sure you connect it to Button
     }
